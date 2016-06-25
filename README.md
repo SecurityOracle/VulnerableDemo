@@ -1,14 +1,9 @@
-# Node.js Starter Overview
+# Node.js Vulnerable Demo App
 
-The Node.js Starter demonstrates a simple, reusable Node.js web application based on the Express framework.
+This demonstrates a simple Node.js application that has vulnerabilities that can be detected and mitigated using Security Oracle.
 
-## Run the app locally
+## Push to CF using custom buildpack
 
-1. [Install Node.js][]
-2. Download and extract the starter code from the Bluemix UI
-3. cd into the app directory
-4. Run `npm install` to install the app's dependencies
-5. Run `npm start` to start the app
-6. Access the running app in a browser at http://localhost:6001
-
-[Install Node.js]: https://nodejs.org/en/download/
+1. Install CF CLI
+2. Run `cf push -b https://github.com/SecurityOracle/nodejs-buildpack` or `cf push -b https://github.com/SecurityOracle/nodejs-buildpack "your-app-name"` if you don't want to use a manifest.yml file
+3. You should be told your app is vulnerable with a link to the report
